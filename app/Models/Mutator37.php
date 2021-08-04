@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Mutator37 extends Model
+{
+    use HasFactory;
+    public $table = "members";
+    public $timestamps = false;
+    public function setNameAttribute($value){
+        $this->attributes['name'] = "Mr. ".$value;
+    }
+    public function setAddressAttribute($value){
+        $this->attributes['address'] = $value.',India';
+    }
+}
